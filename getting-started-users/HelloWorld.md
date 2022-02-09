@@ -121,8 +121,10 @@ Now that things exist, can start building your neurons.
 2. Rename
 
 #### 🏃‍♂ Ex 5: Define the resource and methods
+
 > 🤓 A high-level understanding of the proto file format and the comments on the various aspects of the file content
 > should be sufficient to orientate you around the following steps.
+
 1. Ensure that the following _imports_ are included at the top of the proto:
    ```protobuf
    import "google/protobuf/empty.proto";
