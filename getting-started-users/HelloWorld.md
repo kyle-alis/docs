@@ -124,21 +124,20 @@ Now that things exist, can start building your neurons.
 > 🤓 A high-level understanding of the proto file format and the comments on the various aspects of the file content
 > should be sufficient to orientate you around the following steps.
 1. Ensure that the following _imports_ are included at the top of the proto:
+   ```protobuf
+   import "google/protobuf/empty.proto";
+   import "google/api/resource.proto";
+   import "google/api/field_behavior.proto";
+   import "google/api/client.proto";
+   import "google/api/annotations.proto";
+   import "google/protobuf/timestamp.proto";
+   import "google/protobuf/field_mask.proto";
+   import "google/type/date.proto";
+   ```
 
-> 🚩 If your IDE cannot find the imports, ensure that you:
-> - Have run `alis org get google`; and
-> - [Configured your plugins correctly](/DeviceConfiguration.md).
-
-    ```protobuf
-    import "google/protobuf/empty.proto";
-    import "google/api/resource.proto";
-    import "google/api/field_behavior.proto";
-    import "google/api/client.proto";
-    import "google/api/annotations.proto";
-    import "google/protobuf/timestamp.proto";
-    import "google/protobuf/field_mask.proto";
-    import "google/type/date.proto";
-    ```
+	🚩 If your IDE cannot find the imports, ensure that you:
+	- Have run `alis org get google`; and
+	- [Configured your plugins correctly](/DeviceConfiguration.md).
 
 2. In `receipts.proto`, define the `Receipt` resource:
     ```protobuf
