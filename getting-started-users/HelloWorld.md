@@ -124,6 +124,11 @@ Now that things exist, can start building your neurons.
 > 🤓 A high-level understanding of the proto file format and the comments on the various aspects of the file content
 > should be sufficient to orientate you around the following steps.
 1. Ensure that the following _imports_ are included at the top of the proto:
+
+> 🚩 If your IDE cannot find the imports, ensure that you:
+> - Have run `alis org get google`; and
+> - [Configured your plugins correctly](/DeviceConfiguration.md).
+
     ```protobuf
     import "google/protobuf/empty.proto";
     import "google/api/resource.proto";
@@ -134,10 +139,6 @@ Now that things exist, can start building your neurons.
     import "google/protobuf/field_mask.proto";
     import "google/type/date.proto";
     ```
-
-    > 🚩 If your IDE cannot find the imports, ensure that you:
-    > - Have run `alis org get google`; and
-    > - [Configured your plugins correctly](/DeviceConfiguration.md).
 
 2. In `receipts.proto`, define the `Receipt` resource:
     ```protobuf
@@ -166,6 +167,7 @@ Now that things exist, can start building your neurons.
         google.type.Date actual_return_date = 6;
     }
     ```
+
 3. Now that we have defined the resource, we will add the <a href="https://google.aip.dev/131" target="_blank">
     standard methods</a> on the resource.
     > 🤓 <a href="https://google.aip.dev/131" target="_blank"> The AIP documentation on the standard methods</a> provide
