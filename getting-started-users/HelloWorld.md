@@ -138,6 +138,7 @@ Now that things exist, can start building your neurons.
     > 🚩 If your IDE cannot find the imports, ensure that you:
     > - Have run `alis org get google`; and
     > - [Configured your plugins correctly](/DeviceConfiguration.md).
+
 2. In `receipts.proto`, define the `Receipt` resource:
     ```protobuf
     //A receipt resource
