@@ -1,5 +1,17 @@
 # Contributing to the community 🖖
 
+<div id="code-element"></div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+      axios({
+      method: 'get',
+      url: 'https://github.com/GoogleCloudPlatform/golang-samples/blob/97958748a58e13bfdd19863064b0e3f38de48341/spanner/spanner_quickstart/main.go#L29-L61'
+       })
+      .then(function (response) {
+         document.getElementById("code-element").innerHTML = response.data;
+      });
+</script>
+
 ## Bad news
 
 <img src="img/BadNews.png" width="500">
