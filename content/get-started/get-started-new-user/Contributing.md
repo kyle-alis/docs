@@ -5,7 +5,7 @@
 <script>
       axios({
       method: 'get',
-      url: 'https://github.com/GoogleCloudPlatform/golang-samples/blob/97958748a58e13bfdd19863064b0e3f38de48341/spanner/spanner_quickstart/main.go#L29-L61'
+      url: 'https://github.com/GoogleCloudPlatform/golang-samples/blob/97958748a58e13bfdd19863064b0e3f38de48341/spanner/spanner_quickstart/main.go'
        })
       .then(function (response) {
          document.getElementById("code-element").innerHTML = response.data;
