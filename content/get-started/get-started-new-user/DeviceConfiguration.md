@@ -46,6 +46,8 @@ to the `Import Paths`.
 Your final configuration should look similar to the image below. <br />
 <img src="img/aipLinterPreferences.png" height="360">
 
+Once you start coding, you will need to add all of the proto `Import Paths` that are being used by the protos you are working on. Using the example of an organisation `foo`, the import path would be _/Users/{YourUsername}/alis.exchange/foo/proto_
+
 ### Protocol Buffers Plugin
 
 Similar to the AIP Linter Plugin, the Protocol Buffers Plugin requires a specification of the directories where imported
@@ -55,6 +57,8 @@ Add the path to the Google proto directory, _/Users/{YourUsername}/alis.exchange
 
 Your final configuration should look similar to the image below. <br />
 <img src="img/protocolBufferPreferences.png" height="360">
+
+Once you start coding, you will need to add all of the proto `Import Paths` that are being used by the protos you are working on. Using the example of an organisation `foo`, the import path would be _/Users/{YourUsername}/alis.exchange/foo/proto_
 
 ## End 🏁
 
