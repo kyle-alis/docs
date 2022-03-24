@@ -1,14 +1,15 @@
-# Welcome to alis.exchange
+# alis.exchange-docs
 
-## 🚀 Getting Started
+To run these docs locally. Clone the repository.
 
-1. New user on alis.exchange? Check out [Getting started: New to alis.exchange](/content/get-started/get-started-new-user/README.md)
+Run the following to install Hugo with the extended pacakges required for this project.
 
-## 🏢 Organisations and teams
+```
+mkdir $HOME/src
+cd $HOME/src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
+```
 
-Resources for organisations and teams.
-
-### Guides
-1. [Setting up billing accounts](/content/billing/setting-up-billing-accounts.md)
-2. [Setting up Google Cloud Identity](/content/admin/identity-and-access-management/setting-up-cloud-identity.md)
-3. [Configuring Google Cloud Platform projects for alis.exchange integration](/content/admin/configuration/organisations-gcp-project-config.md)
+Run `hugo serve` in your termial and open the static site on http://localhost:1313/alis.exchange-docs/

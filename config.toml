@@ -1,0 +1,8 @@
+baseURL = 'http://alis-x.github.io/alis.exchange-docs/'
+languageCode = 'en-us'
+title = 'alis.exchange'
+theme="hugo-book-master"
+
+
+[params]
+Logo="images/alis_exchange.png"
