@@ -1,4 +1,4 @@
-baseURL = 'http://alis-x.github.io/alis.exchange-docs/'
+baseURL = 'http://alis-x.github.io/'
 languageCode = 'en-us'
 title = 'alis.exchange'
 theme="hugo-book-master"
