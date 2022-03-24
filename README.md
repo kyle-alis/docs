@@ -12,4 +12,4 @@ cd hugo
 go install --tags extended
 ```
 
-Run `hugo serve` in your termial and open the static site on http://localhost:1313/alis.exchange-docs/
+Run `hugo serve` in your termial and open the static site on http://localhost:1313/
