@@ -1,8 +1,0 @@
-.idea
-**/.idea
-.DStore
-**/.DStore
-.terraform
-.terraform.lock.hcl
-key.json
-key**.json

@@ -17,6 +17,8 @@ One of the key characteristics of Resource oriented design is the emphasis on re
 ## What are protobufs?
 Protos are a language agnostic way of designing resources and their associated methods. Protos are then used to generate language specific methods and object definitions. Working with a proto defined API feels as easy as importing a package or library.
 
+[Learn more]({{< relref "docs/resources/#protocol-buffers" >}})
+
 ## Let’s get building!
 ### Create the product resource or join an existing product
 
