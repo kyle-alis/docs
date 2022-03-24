@@ -1,15 +1,27 @@
-# alis.exchange-docs
+# Welcome to alis.exchange   
 
-To run these docs locally. Clone the repository.
+>**_"Our job as builders is to create the world as it could be."_** - <a href="https://farmerandfarmer.org/mastery/builder.html" target="_blank">Sep Kamvar</a>
 
-Run the following to install Hugo with the extended pacakges required for this project.
+Welcome to the community driven platform that makes it remarkably easy to build and maintain and consume API first software.
 
-```
-mkdir $HOME/src
-cd $HOME/src
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install --tags extended
-```
+## Mission
+The mission of alis.exchange is to empower builders and innovators to solve real problems rather than wasting time reinventing the wheel of cloud infrastructure management and dev ops.
+## Manifesto
 
-Run `hugo serve` in your termial and open the static site on http://localhost:1313/
+### We believe that API-first cultures win
+As systems and organisations grow in complexity, an ever increasing share of effort is expended on non-value adding coordination.
+API-first cultures enable teams and systems to decouple dependencies and thereby increase velocity
+
+### We believe that lowering the barriers to building software increases innovation
+Many of the "barriers to entry" of software, such as cloud system architecture, identity management, documentation management etc, are non-differentiating. We believe that by removing these barriers we can increase the time and effort dedicated to real innovation and problem solving.
+
+### We believe in the power of community
+The alis.exchange platform is built and maintained by it's community and for it's community. We believe that together we can build something great!
+
+## Method
+The alis.exchange platform comprises of patterns that enable the defining, managing and deploying of resource orientated services and interfaces in a consistent and scalable way.
+
+See the [Core Concepts]({{< relref "docs/references/core_concepts" >}}) reference document.
+
+## Get Started
+Excited to start building. Begin by following the [Getting Started]({{< relref "docs/getting_started/" >}}) guide?
