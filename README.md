@@ -1,27 +1,14 @@
-# Welcome to alis.exchange   
+# Welcome to alis.exchange
 
->**_"Our job as builders is to create the world as it could be."_** - <a href="https://farmerandfarmer.org/mastery/builder.html" target="_blank">Sep Kamvar</a>
+## 🚀 Getting Started
 
-Welcome to the community driven platform that makes it remarkably easy to build and maintain and consume API first software.
+1. New user on alis.exchange? Check out [Getting started: New to alis.exchange](/content/get-started/get-started-new-user/README.md)
 
-## Mission
-The mission of alis.exchange is to empower builders and innovators to solve real problems rather than wasting time reinventing the wheel of cloud infrastructure management and dev ops.
-## Manifesto
+## 🏢 Organisations and teams
 
-### We believe that API-first cultures win
-As systems and organisations grow in complexity, an ever increasing share of effort is expended on non-value adding coordination.
-API-first cultures enable teams and systems to decouple dependencies and thereby increase velocity
+Resources for organisations and teams.
 
-### We believe that lowering the barriers to building software increases innovation
-Many of the "barriers to entry" of software, such as cloud system architecture, identity management, documentation management etc, are non-differentiating. We believe that by removing these barriers we can increase the time and effort dedicated to real innovation and problem solving.
-
-### We believe in the power of community
-The alis.exchange platform is built and maintained by it's community and for it's community. We believe that together we can build something great!
-
-## Method
-The alis.exchange platform comprises of patterns that enable the defining, managing and deploying of resource orientated services and interfaces in a consistent and scalable way.
-
-See the [Core Concepts]({{< relref "docs/references/core_concepts" >}}) reference document.
-
-## Get Started
-Excited to start building. Begin by following the [Getting Started]({{< relref "docs/getting_started/" >}}) guide?
+### Guides
+1. [Setting up billing accounts](/content/billing/setting-up-billing-accounts.md)
+2. [Setting up Google Cloud Identity](/content/admin/identity-and-access-management/setting-up-cloud-identity.md)
+3. [Configuring Google Cloud Platform projects for alis.exchange integration](/content/admin/configuration/organisations-gcp-project-config.md)
