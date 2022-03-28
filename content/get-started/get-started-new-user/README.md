@@ -22,4 +22,4 @@ The content is put together for you to move at your own pace. We have also done 
 
 We look forward to have you part of the community!
 
-> 👟 **Up next:** _[Configuring your device](/DeviceConfiguration.md)_ 🧑‍💻
+> > 👟 **Up next:** _[Experience the simplicity](/HelloWorldConsume)_ 📦‍

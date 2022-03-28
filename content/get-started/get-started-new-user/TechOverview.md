@@ -169,7 +169,9 @@ in Go.
 
 ## End 🏁
 
-Now that you have some idea of what is used under the hood, in the following phase we will give you an overview of the
-most essential concepts on **alis.exchange**
+Now that you have some idea of what is used under the hood, we will help you configure your device to get building.
 
-> 👟 **Up next:** _[alis.exchange core concepts 🚀](/ExchangeConcepts.md)_
+> 👟 **Up next:** _[Configuring your device](/DeviceConfiguration.md)_ 🧑‍💻
+
+**Already have a background of the concepts and set up your device?**
+> _[Build your first product](/HelloWorldBuild)_ 👷‍

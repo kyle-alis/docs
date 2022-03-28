@@ -62,6 +62,10 @@ Once you start coding, you will need to add all of the proto `Import Paths` that
 
 ## End 🏁
 
-You are all set up and ready to start building!
+You are all set up and ready to start building. But before we get there, we need to first establish the most
+essential concepts on **alis.exchange**
 
-> 👟 **Up next:** _[Core concepts and technologies overview](/TechOverview.md)_ 🏗
+> 👟 **Up next:** _[alis.exchange core concepts 🚀](/ExchangeConcepts.md)_
+
+**Already have an understanding of the concepts?**
+> _[Build your first product](/HelloWorldBuild)_ 👷‍

@@ -1,6 +1,6 @@
 # alis.exchange core concepts 🚀
 
-> 👉 This is a continuation of getting you to  talk our talk.
+> 👉 This is a continuation of getting you to talk our talk.
 > In this section, we aim to provide you with an overview of the key concepts specific to **alis.exchange**
 > for you to get building.
 
@@ -188,4 +188,4 @@ We know that this may be a lot to take in. We are advocates of learning by doing
 section, we will guide you through building your first product to bring together the various concepts and technologies
 discussed in this section.
 
-> 👟 **Up next:** _[Build your first product](/HelloWorld.md)_ 👷‍
+> 👟 **Up next:** _[Build your first product](/HelloWorldBuild)_ 👷‍
