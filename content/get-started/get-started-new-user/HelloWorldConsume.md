@@ -162,7 +162,7 @@ func init() {
 	// Typical predefined values are:
 	//  - region: "ew"
 	//	- port: "443"
-	serverHost := "resources-books-v1-...-ew-443.a.run.app"
+	serverHost := "resources-books-v1-z5x5ywf7za-ew-443.a.run.app"
 
 	// Initialise connection to the books service.
 	conn, err := NewConn(context.Background(), serverHost, false)
@@ -239,6 +239,10 @@ package main
 
 import "fmt"
 
+func main() {
+	_ = listBooks()
+}
+
 func listBooks() error {
 	// List available books
 	allBooks, err := booksClient.ListBooks(context.Background(), &pb.ListBooksRequest{})
@@ -262,6 +266,10 @@ Secondly, we will `get` a specific book and print all of its information in the 
 package main
 
 import "fmt"
+
+func main() {
+	_ = getBook("books/c4a2")
+}
 
 func getBook(bookName string) error {
 	req := pb.GetBookRequest{Name: bookName}
