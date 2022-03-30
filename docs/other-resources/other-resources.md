@@ -3,7 +3,7 @@
 ## Protocol buffers
 Protocol buffers, commonly referred to as _protos_, provide the interface definition language. 
 
-Protos are the golden source of truth of anything we do on the **alis.exchange**. Staring with protos eliminates common sources of developer toil by:
+Protos are the golden source of truth of anything we do on the **alis.exchange**. Starting with protos eliminates common sources of developer toil by:
 - Auto-generating documentation for APIs
 - Auto-generating source code for the majority of popular languages including Go, Java, Python and more
 - Auto-generating equivalent REST endpoints for gRPC services
