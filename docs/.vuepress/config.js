@@ -42,6 +42,7 @@ module.exports = {
     // theme and its config
     theme: '@vuepress/theme-default',
     themeConfig: {
+      repo: "alis-x/docs",
       logo: 'https://github.com/kyle-alis/demo2/blob/gh-pages/assets/images/alis_exchange.png?raw=true',
       displayAllHeaderLinks: true,
       sidebar: sidebar,
