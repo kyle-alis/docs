@@ -6,7 +6,7 @@ next: /guides/make-your-first-request
 
 ## The alis.exchange philosophy
 
- // FLUFFY COPY //
+ 
 
 ## What are protobufs?
 
