@@ -32,7 +32,7 @@ const sidebar = [
 
 module.exports = {
     // site config
-    base: "/docs/",
+    base: "/",
     lang: 'en-UK',
     title: 'alis.exchange',
     description: 'This is my first VuePress site',
