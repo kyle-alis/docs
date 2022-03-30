@@ -1,14 +1,16 @@
-# Welcome to alis.exchange
+# alis.exchange Docs
 
-## 🚀 Getting Started
+## Contribution
 
-1. New user on alis.exchange? Check out [Getting started: New to alis.exchange](/content/get-started/get-started-new-user/README.md)
+This site is built with VuePress. Site content is written in Markdown format located in docs. For simple edits, you can directly edit the file on GitHub and generate a Pull Request.
 
-## 🏢 Organisations and teams
+For local development, fork the repo and use npm as the preferred package manager:
 
-Resources for organisations and teams.
+npm i
+npm run docs:dev
 
-### Guides
-1. [Setting up billing accounts](/content/billing/setting-up-billing-accounts.md)
-2. [Setting up Google Cloud Identity](/content/admin/identity-and-access-management/setting-up-cloud-identity.md)
-3. [Configuring Google Cloud Platform projects for alis.exchange integration](/content/admin/configuration/organisations-gcp-project-config.md)
+## Working on the content
+
+See <a href="https://vuepress.vuejs.org/guide/markdown.html" target="blank">VuePress</a> docs on supported Markdown Extensions and the ability to use Vue syntax inside markdown.
+
+See the [**alis.exchange** Writing Guide](/.github/contributions/writing-guide.md) for our rules and recommendations on writing and maintaining documentation content.
