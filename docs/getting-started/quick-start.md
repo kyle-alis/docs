@@ -49,7 +49,7 @@ rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
     };
 }
 ```
-With a defined resource and a method you are ready to make your first request.  Try making a request to the resource in the <a href="https://alisx-codespacesplayg-5aghydnu51y.ws-eu38.gitpod.io/" target="blank">cloud IDE</a>.
+With a defined resource and a method you are ready to make your first request.  Try making a request to the resource in the <a href="https://gitpod.io/start/#alisx-codespacesplayg-5aghydnu51y" target="blank">cloud IDE</a>.
 
 Open the cloud IDE and choose the folder with your preferred coding language.
 
