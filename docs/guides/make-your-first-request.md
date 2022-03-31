@@ -417,11 +417,6 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 :::
 
 
-### Using the responses
-
-As seen in the example, response type is ALWAYS predictable as it is based on the proto definition of the resource. This
-predictability allows you to easily use the response to perform actions or augment the data.
-
 ## Next Steps
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
