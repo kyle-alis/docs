@@ -41,7 +41,7 @@ import "google/type/date.proto";
 
 option go_package = "go.protobuf.foo.alis.exchange/foo/br/resources/books/v1";
 // Book service for foo.br.
-service BookService {
+service BooksService {
 	// List all available books.
 	rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
 		option (google.api.http) = {
