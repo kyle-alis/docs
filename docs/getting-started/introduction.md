@@ -28,3 +28,5 @@ Curious as to how? See the [Reference](/references/resource-oriented-design.html
 
 ## Get Started
 Excited to start exploring. Begin by following the [Quick Start](./quick-start.md)?
+
+![Image](../.vuepress/public/assets/images/_EX.png)
