@@ -98,5 +98,11 @@ $ cd R
 How to make request steps
 :::
 
-## Con
+If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/docs/guides/make-your-first-request.md).
+
+## Next Steps
+
+**Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
+
+Already a signed up? [Get your local environment set up](/docs/getting-started/command-line-interface.md)
 
