@@ -7,7 +7,7 @@ next: /other-resources/other-resources.html
 **alis.exchange** has a collection of resources that follow the best practices of resource-oriented design. 
 These resources are used to elegantly integrate cloud technologies that make up the **alis.exhange** platform. The three most important resources are depicted in the image below.
 
-![](https://raw.githubusercontent.com/alis-x/alis.exchange-docs/b55a1be67aa4a45d1807cbc9b09e9e5a87efd89e/assets/images/resourceHierarchy.svg)
+![](../.vuepress/public/assets/images/resourceHierarchy.svg)
 
 The three major resources can be communicated together as an `organisation` having one or more `product`,
 consisting of one or more `neuron`. Additionally, `products` have `deployments`, which consists of all, or a subset, of the
@@ -59,7 +59,7 @@ A _deployment_ refers to an operational instance of a `product` on the cloud whi
 ### Product deployment
 
 A `product deployment` refers to the hardware infrastructure aspect of the product. As explained in the
-[product section](https://github.com/alis-x/initial-user-onboarding/blob/master/ExchangeConcepts.md#product), the
+[product section](/references/core-concepts.html#product), the
 organisation's `proto` repository contains a directory for each product, in which the infrastructure requirements used
 within the neurons are specified.
 
@@ -97,7 +97,7 @@ have emerged from builders on **alis.exchange** which are discussed in the follo
 To demonstrate the three most typical deployment patterns, consider the example, depicted in the image, of a `product`
 consisting of three `neurons`.
 
-![](https://raw.githubusercontent.com/alis-x/alis.exchange-docs/b55a1be67aa4a45d1807cbc9b09e9e5a87efd89e/assets/images/ExchangeConceptsProductNeuron.svg)
+![](../.vuepress/public/assets/images/ExchangeConceptsProductNeuron.svg)
 
 ### Pattern 1: Full product deployment
 
@@ -106,7 +106,7 @@ to clients is required to have all the functionality across all the `neurons` an
 deployments`.
 
 
-![](https://raw.githubusercontent.com/alis-x/alis.exchange-docs/b55a1be67aa4a45d1807cbc9b09e9e5a87efd89e/assets/images/ExchangeConceptsProductNeuronPattern1.svg)
+![](../.vuepress/public/assets/images/ExchangeConceptsProductNeuronPattern1.svg)
 
 ### Pattern 2: Limited features product deployment
 
@@ -121,7 +121,7 @@ In the second case, the client would have the functionality provided by the core
 functionality of `Neuron 3`.
 
 
-![](https://raw.githubusercontent.com/alis-x/alis.exchange-docs/b55a1be67aa4a45d1807cbc9b09e9e5a87efd89e/assets/images/ExchangeConceptsProductNeuronPattern2.svg)
+![](../.vuepress/public/assets/images/ExchangeConceptsProductNeuronPattern2.svg)
 
 ### Pattern 3: Interdependent neurons product deployment
 
@@ -140,4 +140,4 @@ The image depicts an example where `neuron deployments` of multiple `product dep
 shared `neuron deployment`.
 
 
-![](https://raw.githubusercontent.com/alis-x/alis.exchange-docs/b55a1be67aa4a45d1807cbc9b09e9e5a87efd89e/assets/images/ExchangeConceptsProductNeuronPattern3.svg)
+![](../.vuepress/public/assets/images/ExchangeConceptsProductNeuronPattern3.svg)

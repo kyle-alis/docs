@@ -1,10 +1,10 @@
 # Make a request to a product
 
-> 👉 This section is supplementary to the [quickstart](/docs/getting-started/quick-start.md). We recommend that you first complete the quickstart before 
+> This section is supplementary to the [quickstart](/getting-started/quick-start.md). We recommend that you first complete the quickstart before 
 
 Given the underlying technologies used, **alis.exchange** provides the ability to generate client libraries for various
 supported coding languages. For users of the product, it allows you to programmatically access products natively in your
-code without having to wrangle obscure, unpredictable data objects (see [quickstart](/docs/getting-started/quick-start.md)).
+code without having to wrangle obscure, unpredictable data objects (see [quickstart](/getting-started/quick-start.md)).
 
 Irrespective of the language, this is done in two steps:
 
@@ -13,7 +13,7 @@ Irrespective of the language, this is done in two steps:
 
 Following the same Book example as the quickstart, this guide will step you through making requests in your own developer environment.
 
-> 👨‍💻 We currently only provide the guide for Go. Want to help us expand this to other languages? [Make a contribution](https://github.com/alis-x/docs/edit/main/docs/guides/make-your-first-request.md).
+> We currently only provide the guide for Go. Want to help us expand this to other languages? [Make a contribution](https://github.com/alis-x/docs/edit/main/docs/guides/make-your-first-request.md).
 
 
 ## Book repository example
@@ -421,4 +421,4 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
 
-Already a signed up? [Get your local environment set up](/docs/getting-started/command-line-interface.md)
+Already a signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
