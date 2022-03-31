@@ -421,4 +421,4 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
 
-Already a signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
+Already signed up? [Get your local environment set up](/getting-started/command-line-interface.md)

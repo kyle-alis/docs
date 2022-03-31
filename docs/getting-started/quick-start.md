@@ -104,5 +104,5 @@ If you are interested in recreating this example in your own development environ
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
 
-Already a signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
+Already signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
 
