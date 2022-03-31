@@ -51,11 +51,11 @@ message Book {
 }
 ```
 
-The builders of this product allows you to list all the books available, `ListBooks`, and to retrieve the details of a specific book, `GetBook`. These are also defined in the `books.proto` file as part of the `BookService`:
+The builders of this product allows you to list all the books available, `ListBooks`, and to retrieve the details of a specific book, `GetBook`. These are also defined in the `books.proto` file as part of the `BooksService`:
 
 ```protobuf
 // Book service for foo.br.
-service Service {
+service BooksService {
 	// List all available books.
 	rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
 		option (google.api.http) = {
