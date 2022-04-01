@@ -16,7 +16,7 @@ From a technical perspective:
 > Protocol buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data. [Source](https://developers.google.com/protocol-buffers)
 
 What is important from a practical perspective however is that:
-> You **define how you want your data to be structured once**, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.
+> You **define how you want your data to be structured once**, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages. [Source](https://developers.google.com/protocol-buffers)
 
 Two things to take note of:
 
@@ -51,11 +51,11 @@ message Book {
 }
 ```
 
-The builders of this product allows you to list all the books available, `ListBooks`, and to retrieve the details of a specific book, `GetBook`. These are also defined in the `books.proto` file as part of the `BookService`:
+The builders of this product allows you to list all the books available, `ListBooks`, and to retrieve the details of a specific book, `GetBook`. These are also defined in the `books.proto` file as part of the `BooksService`:
 
 ```protobuf
 // Book service for foo.br.
-service Service {
+service BooksService {
 	// List all available books.
 	rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
 		option (google.api.http) = {
@@ -76,7 +76,7 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io/start/#alisx-codespacesplayg-5aghydnu51y" target="blank">preconfigured Cloud IDE</a>.
+Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io#snapshot/5f91a2de-3477-47cb-9774-2c7c2bad462b" target="blank">preconfigured Cloud IDE</a>.
 
 ::: details Go
 #### Make a request using Go
@@ -130,11 +130,11 @@ We suggest creating your own function and incorporating a request to the `BooksC
 * Use the response of `ListBooks` to make multiple `GetBook` requests.
 :::
 
-If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/docs/guides/make-your-first-request.md).
+If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/guides/make-your-first-request.md).
 
 ## Next Steps
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
 
-Already a signed up? [Get your local environment set up](/docs/getting-started/command-line-interface.md)
+Already signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
 
