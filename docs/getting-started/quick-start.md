@@ -76,7 +76,7 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io#snapshot/5f91a2de-3477-47cb-9774-2c7c2bad462b" target="blank">preconfigured Cloud IDE</a>.
+Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io#snapshot/53e3c48a-8d49-42b5-a616-8f2a2c8592e0" target="blank">preconfigured Cloud IDE</a>.
 
 ::: details Go
 #### Make a request using Go
