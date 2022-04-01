@@ -416,6 +416,21 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 ```
 :::
 
+## Get a feel for the **alis.exchange** experience
+
+Try your hands creating your own function and incorporating a request to the `BooksClient`. Some suggestions of things to try:
+
+* Loop through all the books and print out the author.
+* Get a book and wrangle the response to be printed out in a sentence structure.
+* Use the response of `ListBooks` to make multiple `GetBook` requests.
+
+::: tip ProTip
+
+Running a new function in debug mode allows you to see what happens at every line of code when a function is executed. To run a function in debug mode in VS Code place a break point next to the line number of the function line you would like to explore during run time. Select the run & debug option in the left hand navigation bar. Click `Run and Debug`. All variables and there state at the break point is revealed in the left panel. The function is paused at the breakpoint, to continue with the function's execution click the red stop square in the top popup menu. Hover over the top popup menu's options to see what else you can do when a function is paused at a breakpoint.
+
+![gif of debug](../.vuepress/public/assets/images/debug_gif.gif)
+:::
+
 
 ## Next Steps
 

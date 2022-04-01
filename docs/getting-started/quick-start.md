@@ -78,13 +78,15 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 Experience the simplicity in accessing these methods in any of the supported languages using one of our preconfigure cloud IDEs:
 
-1) <a href="" target="blank">Go</a>
-2) <a href="" target="blank">R</a>
-
 ::: details Go
 #### Make a request using Go
 
+<a href="https://gitpod.io#snapshot/5cfe5016-fcb2-43d3-b5ab-842b464bbc24" target="blank"> Go Cloud IDE </a>
+
+
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
+
+	>If the terminal is already open run `$ clear` to clear the terminal window.
 
 2. Run the code by running the terminal command:
 
@@ -106,7 +108,12 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
+<a href="https://gitpod.io#snapshot/23cd9502-21bb-40f5-96ba-0e8bb653ccdd" target="blank"> R Cloud IDE </a>
+
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
+
+	>If the terminal is already open run `$ clear` to clear the terminal window.
+
 
 2. Run the code
 
@@ -126,15 +133,6 @@ We suggest creating your own function and incorporating a request to the `BooksC
 :::
 
 If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/guides/make-your-first-request.md).
-
-
-::: tip ProTip
-
-Running a new function in debug mode allows you to see what happens at every line of code when a function is executed. To run a function in debug mode in V SCode place a break point next to the line number of the function line you would like to explore during run time. Select the run & debug option in the left hand navigation bar. Click `Run and Debug`. All variables and there state at the break point is revealed in the left panel. The function is paused at the breakpoint, to continue with the function's execution click the red stop square in the top popup menu. Hover over the top popup menu's options to see what else you can do when a function is paused at a breakpoint.
-
-![gif of debug]()
-:::
-
 ## Next Steps
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
