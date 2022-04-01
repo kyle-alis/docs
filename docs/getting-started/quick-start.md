@@ -76,18 +76,15 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io#snapshot/53e3c48a-8d49-42b5-a616-8f2a2c8592e0" target="blank">preconfigured Cloud IDE</a>.
+Experience the simplicity in accessing these methods in any of the supported languages using one of our preconfigure cloud IDEs:
+
+1) <a href="" target="blank">Go</a>
+2) <a href="" target="blank">R</a>
 
 ::: details Go
 #### Make a request using Go
 
-1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `go` directory.
-
-If executing this example on Gitpod, run the following command from the terminal:
-
-```bash
-$ cd $GITPOD_REPO_ROOT/go
-```
+1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 2. Run the code by running the terminal command:
 
@@ -109,15 +106,13 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
-1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `go` directory by running:
-
-```bash
-$ cd $GITPOD_REPO_ROOT/R
-```
+1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 2. Run the code
 
-<!-- TODO: Kyle to add commands -->
+```bash
+$ Rscript booksConsume.r
+```
 
 #### Get a feel for the **alis.exchange** experience
 
@@ -131,6 +126,14 @@ We suggest creating your own function and incorporating a request to the `BooksC
 :::
 
 If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/guides/make-your-first-request.md).
+
+
+::: tip ProTip
+
+Running a new function in debug mode allows you to see what happens at every line of code when a function is executed. To run a function in debug mode in V SCode place a break point next to the line number of the function line you would like to explore during run time. Select the run & debug option in the left hand navigation bar. Click `Run and Debug`. All variables and there state at the break point is revealed in the left panel. The function is paused at the breakpoint, to continue with the function's execution click the red stop square in the top popup menu. Hover over the top popup menu's options to see what else you can do when a function is paused at a breakpoint.
+
+![gif of debug]()
+:::
 
 ## Next Steps
 
