@@ -6,8 +6,11 @@ This site is built with VuePress. Site content is written in Markdown format loc
 
 For local development, fork the repo and use npm as the preferred package manager:
 
-npm i
-npm run docs:dev
+```bash
+$ npm i
+
+$ npm run docs:dev
+```
 
 ## Working on the content
 

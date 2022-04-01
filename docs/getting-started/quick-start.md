@@ -79,23 +79,55 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io/start/#alisx-codespacesplayg-5aghydnu51y" target="blank">preconfigured Cloud IDE</a>.
 
 ::: details Go
-Open a terminal and ensure you are in the _go_ directory. 
+#### Make a request using Go
 
-```sh
-$ cd go
+1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `go` directory.
+
+If executing this example on Gitpod, run the following command from the terminal:
+
+```bash
+$ cd $GITPOD_REPO_ROOT/go
 ```
 
-Run `go run *.go` to make your first request.
+2. Run the code by running the terminal command:
+
+```bash
+$ go run *.go
+```
+
+#### Get a feel for the **alis.exchange** experience
+
+Interested in trying something for yourself?
+
+We suggest creating your own function and incorporating a request to the `BooksClient`. Some suggestions of things to try:
+
+* Loop through all the books and print out the author.
+* Get a book and wrangle the response to be printed out in a sentence structure.
+* Use the response of `ListBooks` to make multiple `GetBook` requests.
 :::
 
 ::: details R
-Open a terminal and ensure you are in the _R_ directory. 
+#### Make a request using R
 
-```sh
-$ cd R
+1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `go` directory by running:
+
+```bash
+$ cd $GITPOD_REPO_ROOT/R
 ```
 
-How to make request steps
+2. Run the code
+
+<!-- TODO: Kyle to add commands -->
+
+#### Get a feel for the **alis.exchange** experience
+
+Interested in trying something for yourself?
+
+We suggest creating your own function and incorporating a request to the `BooksClient`. Some suggestions of things to try:
+
+* Loop through all the books and print out the author.
+* Get a book and wrangle the response to be printed out in a sentence structure.
+* Use the response of `ListBooks` to make multiple `GetBook` requests.
 :::
 
 If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/docs/guides/make-your-first-request.md).
