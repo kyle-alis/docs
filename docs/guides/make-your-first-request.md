@@ -198,21 +198,6 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 		opts = append(opts, grpc.WithTransportCredentials(cred))
 	}
 
-	// use a tokenSource to automatically inject tokens with each underlying client request
-	audience := "https://" + strings.Split(host, ":")[0]
-	tokenSource, err := idtoken.NewTokenSource(ctx, audience, option.WithAudiences(audience))
-	if err != nil {
-		return nil, status.Errorf(
-			codes.Unauthenticated,
-			"NewTokenSource: %s", err,
-		)
-	}
-	opts = append(opts, grpc.WithPerRPCCredentials(grpcTokenSource{
-		TokenSource: oauth.TokenSource{
-			tokenSource,
-		},
-	}))
-
 	return grpc.Dial(host, opts...)
 }
 ```
@@ -239,20 +224,24 @@ import "fmt"
 var(...)
 
 func main() {
-	_ = printBookNames()
+	// Call the printBookNames function
+	result, err := printBookNames()
+	fmt.Println(result, err)
 }
 
-func printBookNames() error {
+// function makes a call to the books service to get a list of books
+func printBookNames() (string, error) {
+	// Call the ListBooks method on the client library
 	allBooks, err := booksClient.ListBooks(context.Background(), &pb.ListBooksRequest{})
 	if err != nil {
-		return fmt.Errorf("could not list books: %v", err)
+		return "", fmt.Errorf("could not list books: %v", err)
 	}
-
+	// Print the list of books from the response
 	for _, book := range allBooks.Books {
 		fmt.Printf("%s\n", book.DisplayName)
 	}
 
-	return nil
+	return "Done!", nil
 }
 ```
 
@@ -268,19 +257,26 @@ package main
 import "fmt"
 
 func main() {
-	_ = printBookDetails("books/c4a2")
+	// Call the printBookDetails function
+	result, err = printBookDetails("books/c4a2")
+	fmt.Println(result, err)
 }
 
-func printBookDetails(bookName string) error {
+// function makes a call to the books service to get a book details
+func printBookDetails(bookName string) (string, error) {
+	//Create a request to get a book details
 	req := pb.GetBookRequest{Name: bookName}
 
+	// Call the GetBook method on the client library
 	book, err := booksClient.GetBook(context.Background(), &req)
 	if err != nil {
-		return fmt.Errorf("could not get book: %v", err)
+		return "", fmt.Errorf("could not get book: %v", err)
 	}
+
+	// Print the book details
 	fmt.Printf("%s\n", book)
 
-	return nil
+	return "Done!", nil
 }
 ```
 
@@ -340,33 +336,45 @@ func init() {
 }
 
 func main() {
-	_ = printBookNames()
-	_ = printBookDetails("books/c4a2")
+	// Call the printBookNames function
+	result, err := printBookNames()
+	fmt.Println(result, err)
+
+	// Call the printBookDetails function
+	result, err = printBookDetails("books/c4a2")
+	fmt.Println(result, err)
 }
 
-func printBookNames() error {
+// function makes a call to the books service to get a list of books
+func printBookNames() (string, error) {
+	// Call the ListBooks method on the client library
 	allBooks, err := booksClient.ListBooks(context.Background(), &pb.ListBooksRequest{})
 	if err != nil {
-		return fmt.Errorf("could not list books: %v", err)
+		return "", fmt.Errorf("could not list books: %v", err)
 	}
-
+	// Print the list of books from the response
 	for _, book := range allBooks.Books {
 		fmt.Printf("%s\n", book.DisplayName)
 	}
 
-	return nil
+	return "Done!", nil
 }
 
-func printBookDetails(bookName string) error {
+// function makes a call to the books service to get a book details
+func printBookDetails(bookName string) (string, error) {
+	//Create a request to get a book details
 	req := pb.GetBookRequest{Name: bookName}
 
+	// Call the GetBook method on the client library
 	book, err := booksClient.GetBook(context.Background(), &req)
 	if err != nil {
-		return fmt.Errorf("could not get book: %v", err)
+		return "", fmt.Errorf("could not get book: %v", err)
 	}
+
+	// Print the book details
 	fmt.Printf("%s\n", book)
 
-	return nil
+	return "Done!", nil
 }
 
 type grpcTokenSource struct {
@@ -395,21 +403,6 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 		})
 		opts = append(opts, grpc.WithTransportCredentials(cred))
 	}
-
-	// use a tokenSource to automatically inject tokens with each underlying client request
-	audience := "https://" + strings.Split(host, ":")[0]
-	tokenSource, err := idtoken.NewTokenSource(ctx, audience, option.WithAudiences(audience))
-	if err != nil {
-		return nil, status.Errorf(
-			codes.Unauthenticated,
-			"NewTokenSource: %s", err,
-		)
-	}
-	opts = append(opts, grpc.WithPerRPCCredentials(grpcTokenSource{
-		TokenSource: oauth.TokenSource{
-			tokenSource,
-		},
-	}))
 
 	return grpc.Dial(host, opts...)
 }
