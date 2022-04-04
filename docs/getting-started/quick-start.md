@@ -76,19 +76,22 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using one of our preconfigure cloud IDEs:
+Experience the simplicity in accessing these methods in any of the supported languages using one of our <a href="" traget="blank">preconfigure cloud IDEs</a>:
 
 ::: details Go
 #### Make a request using Go
-
-<a href="https://gitpod.io#snapshot/5cfe5016-fcb2-43d3-b5ab-842b464bbc24" target="blank"> Go Cloud IDE </a>
-
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 	>If the terminal is already open run `$ clear` to clear the terminal window.
 
-2. Run the code by running the terminal command:
+2. Make sure you are in the `Go` directory.
+
+```bash
+$ cd workspace/playground/Go
+```
+
+3. Run the code by running the terminal command:
 
 ```bash
 $ go run *.go
@@ -108,14 +111,17 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
-<a href="https://gitpod.io#snapshot/23cd9502-21bb-40f5-96ba-0e8bb653ccdd" target="blank"> R Cloud IDE </a>
-
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 	>If the terminal is already open run `$ clear` to clear the terminal window.
 
+2. Make sure you are in the `R` directory.
 
-2. Run the code
+```bash
+$ cd workspace/playground/R
+```
+
+3. Run the code
 
 ```bash
 $ Rscript booksConsume.r
