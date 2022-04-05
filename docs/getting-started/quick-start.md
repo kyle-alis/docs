@@ -81,7 +81,7 @@ Experience the simplicity in accessing these methods in any of the supported lan
 ::: details Go
 #### Make a request using Go
 
-<a href="https://gitpod.io#snapshot/3d9ade02-e66b-4c4a-ad09-b1366e826f98" target="_blank">Preconfigured Go cloud IDE</a>
+<!-- <a href="https://gitpod.io#snapshot/3d9ade02-e66b-4c4a-ad09-b1366e826f98" target="_blank">Preconfigured Go cloud IDE</a> -->
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
