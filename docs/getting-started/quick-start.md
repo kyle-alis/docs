@@ -82,16 +82,14 @@ Experience the simplicity in accessing these methods in any of the supported lan
 ::: details Go
 #### Make a request using Go
 
-<!-- <a href="https://gitpod.io#snapshot/3d9ade02-e66b-4c4a-ad09-b1366e826f98" target="_blank">Preconfigured Go cloud IDE</a> -->
-
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 	>If the terminal is already open run `$ clear` to clear the terminal window.
 
-2. Make sure you are in the `playground-GO` directory.
+2. Make sure you are in the `Go` directory.
 
 ```bash
-$ cd workspace/playground-GO
+$ cd workspace/playground/Go
 ```
 
 3. Run the code by running the terminal command:
@@ -114,16 +112,14 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
-<a href="https://gitpod.io#snapshot/a9bdd126-01d6-4b11-808b-b19bfd9b099c" target="_blank">Preconfigured R cloud IDE</a>
-
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 	>If the terminal is already open run `$ clear` to clear the terminal window.
 
-2. Make sure you are in the `playground-R` directory.
+2. Make sure you are in the `R` directory.
 
 ```bash
-$ cd workspace/playground-R
+$ cd workspace/playground/R
 ```
 
 3. Run the code
