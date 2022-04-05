@@ -82,11 +82,7 @@ Experience the simplicity in accessing these methods in any of the supported lan
 ::: details Go
 #### Make a request using Go
 
-::: tip Go Packages
-When promoted to install go packages, choose to `Install All`
-
-![gif of debug](../.vuepress/public/assets/images/install_all.png)
-:::
+>When promoted to install go packages, choose to `Install All`
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
