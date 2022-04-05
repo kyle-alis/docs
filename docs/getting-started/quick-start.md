@@ -81,7 +81,7 @@ Experience the simplicity in accessing these methods in any of the supported lan
 ::: details Go
 #### Make a request using Go
 
-<a href="https://gitpod.io#snapshot/10559da3-9d92-4ef0-baae-329c0ecb4e63" target="blank">Preconfigured Go cloud IDE</a>
+<a href="https://gitpod.io#snapshot/3d9ade02-e66b-4c4a-ad09-b1366e826f98" target="_blank">Preconfigured Go cloud IDE</a>
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
@@ -113,7 +113,7 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
-<a href="https://gitpod.io#snapshot/a9bdd126-01d6-4b11-808b-b19bfd9b099c" target="blank">Preconfigured R cloud IDE</a>
+<a href="https://gitpod.io#snapshot/a9bdd126-01d6-4b11-808b-b19bfd9b099c" target="_blank">Preconfigured R cloud IDE</a>
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
