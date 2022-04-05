@@ -46,7 +46,7 @@ module.exports = {
       docsDir: 'docs',
       docsBranch: 'main',
       editLinks: true,
-      logo: "https://github.com/kyle-alis/demo2/blob/main/docs/.vuepress/public/assets/images/alis_exchange.png?raw=true",
+      logo: "https://github.com/alis-x/docs/blob/main/docs/.vuepress/public/assets/images/alis_exchange.png?raw=true",
       displayAllHeaderLinks: true,
       sidebar: sidebar,
       nextLinks: false,
