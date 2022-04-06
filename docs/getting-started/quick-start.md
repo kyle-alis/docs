@@ -76,22 +76,22 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using our <a href="https://gitpod.io#snapshot/dda87f98-36e0-4dbd-a85f-fa6e1a249b29" target="_blank">Preconfigured cloud IDE</a>.
+Experience the simplicity in accessing these methods in any of the supported languages using one of our:
 :
 
 ::: details Go
 #### Make a request using Go
 
->When promoted to install go packages, choose to `Install All`
+<a href="https://gitpod.io#snapshot/c1eafefa-0414-439e-a618-4089e1d50143" target="_blank">Preconfigured Go cloud IDE</a>
 
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 	>If the terminal is already open run `$ clear` to clear the terminal window.
 
-2. Make sure you are in the `Go` directory.
+2. Make sure you are in the `playground` directory.
 
 ```bash
-$ cd workspace/playground/Go
+$ cd workspace/playground
 ```
 
 3. Run the code by running the terminal command:
@@ -114,14 +114,16 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
+<a href="https://gitpod.io#snapshot/c858a081-f9e0-4791-9330-606a568df6fd" target="_blank">Preconfigured R cloud IDE</a>
+
 1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
 
 	>If the terminal is already open run `$ clear` to clear the terminal window.
 
-2. Make sure you are in the `R` directory.
+2. Make sure you are in the `playground` directory.
 
 ```bash
-$ cd workspace/playground/R
+$ cd workspace/playground
 ```
 
 3. Run the code
@@ -144,7 +146,7 @@ We suggest creating your own function and incorporating a request to the `BooksC
 If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/guides/make-your-first-request.md).
 ## Next Steps
 
-**Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
+**Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="_blank">Get in touch</a>.
 
 Already signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
 
