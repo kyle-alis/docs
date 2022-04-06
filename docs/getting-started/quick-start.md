@@ -76,8 +76,7 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using one of our:
-:
+Experience the simplicity in accessing these methods in any of the supported languages in using one of our preconfigured cloud IDEs:
 
 ::: details Go
 #### Make a request using Go
