@@ -9,7 +9,7 @@ We believe high quality documentation helps shape a positive relationship betwee
 If you spot a problem with the docs, before you jump into providing a solution, search if an issue already exists. In the case that it does, use the issue to create a PR. If a related issue doesn't exist, you can open a new issue using a relevant issue form.
 
 ## Make Changes
-The content of the documents are written in <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Github Flavoured Markdown</a>. Each document is saved in a relevant topic folders in the docs directory. See the **Adding a new document** section for more info on the different topics.
+The content of the documents are written in <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Github Flavoured Markdown</a>. Each document is saved in a relevant topic folder in the docs directory. See the **Adding a new document** section for more info on the different topics.
 
 The site is built with VuePress. See <a href="https://vuepress.vuejs.org/guide/markdown.html" target="_blank">VuePress</a> docs on supported Markdown Extensions and the ability to use Vue syntax inside markdown.
 ### Making changes on Github
@@ -39,7 +39,7 @@ http://localhost:8080
     - **Other Resources**: 
 2. Adding a link ot the navigation bar.
     - Open the config.js file in the docs/.vuepress directory. 
-    - In the *sidebar* variable add the link to the new document under the relevant topic folders children array
+    - In the *sidebar* variable add the link to the new document under the relevant topic folder children array
         ```
         {
             ...
