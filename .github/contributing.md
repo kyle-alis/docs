@@ -41,11 +41,12 @@ http://localhost:8080
     - Open the config.js file in the docs/.vuepress directory. 
     - In the *sidebar* variable add the link to the new document under the relevant topic folders children array
         ```
-        children: [
-
-        "/{topic}/{document_name}",
-
-        ]
+        {
+            ...
+            children: [
+                "/{topic}/{document_name}",
+            ]
+        },
         ```
     > The title of the document will be displayed in the sidebar.
 3. Commit and push your changes to the forked repo.
