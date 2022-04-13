@@ -16,4 +16,4 @@ $ npm run docs:dev
 
 See <a href="https://vuepress.vuejs.org/guide/markdown.html" target="_blank">VuePress</a> docs on supported Markdown Extensions and the ability to use Vue syntax inside markdown.
 
-See the [**alis.exchange** Writing Guide](/.github/contributions/writing-guide.md) for our rules and recommendations on writing and maintaining documentation content.
+See the [**alis.exchange** Writing Guide](/.github/contributing.md) for our rules and recommendations on writing and maintaining documentation content.
