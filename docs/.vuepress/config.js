@@ -12,7 +12,7 @@ const sidebar = [
     collapsable: false, 
     children: [
         '/guides/make-your-first-request',
-        "/getting-started/command-line-interface"
+        "/guides/command-line-interface"
     ]
     },
     {
