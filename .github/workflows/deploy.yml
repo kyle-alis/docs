@@ -11,8 +11,8 @@ jobs:
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
       env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: alis-x/docs
-        TARGET_BRANCH: gh-pages
+        TARGET_BRANCH: ge-pages
         BUILD_SCRIPT: npm ci && npm run docs:build
         BUILD_DIR: docs/.vuepress/dist
