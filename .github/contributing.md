@@ -31,23 +31,24 @@ $ npm run docs:dev
 ```
 http://localhost:8080
 ```
-## Adding a new document:
+## Adding a new file:
 
 1. Create a new `.md` under the relevant topic folder.
     - **Guides**: 
     - **References**: 
     - **Other Resources**: 
-2. Adding a link ot the navigation bar.
+2. Adding a link to the navigation bar.
     - Open the config.js file in the docs/.vuepress directory. 
-    - In the *sidebar* variable add the link to the new document under the relevant topic folder children array
+    - In the *sidebar* variable add the link to the new file under the relevant topic folder children array:
         ```
         {
             ...
             children: [
-                "/{topic}/{document_name}",
+                "/{topic}/{file_name}",
             ]
         },
         ```
+    - File names should be separated with hyphens for example `quick-start.md`.
     > The title of the document will be displayed in the sidebar.
 3. Commit and push your changes to the forked repo.
 4. Make a PR to the original repo with the PR template. We will give comments on the PR if any rework is required.

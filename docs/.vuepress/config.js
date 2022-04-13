@@ -11,8 +11,9 @@ const sidebar = [
     title: 'Guides',
     collapsable: false, 
     children: [
+        "/guides/set-up-your-favourite-IDE",
+        "/guides/command-line-interface",
         '/guides/make-your-first-request',
-        "/guides/command-line-interface"
     ]
     },
     {

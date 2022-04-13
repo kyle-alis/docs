@@ -147,5 +147,3 @@ If you are interested in recreating this example in your own development environ
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="_blank">Get in touch</a>.
 
-Already signed up? [Get your local environment set up](/getting-started/command-line-interface.md)
-
