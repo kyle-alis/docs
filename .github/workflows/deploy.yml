@@ -16,4 +16,3 @@ jobs:
         TARGET_BRANCH: gh-pages
         BUILD_SCRIPT: npm ci && npm run docs:build
         BUILD_DIR: docs/.vuepress/dist
-        CNAME: https://github.com/alis-x/docs.git
