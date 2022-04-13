@@ -56,3 +56,9 @@ http://localhost:8080
 ## Merging your PR
 
 Once we have reviewed your PR we will merge it into the original repo and your're changes will be visible on <a href="https://docs.alis.exchange" target="_blank">doc.alis.exchange</a>   :tada:.
+
+
+## Working on the content
+
+- titles
+- next page link
