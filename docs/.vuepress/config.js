@@ -38,8 +38,15 @@ module.exports = {
     title: 'alis.exchange',
     description: 'This is my first VuePress site',
     head: [
-        ['link', { rel: 'icon', href: '../.vuepress/public/assets/images/_EX.png' }]
+        ['link', { rel: 'icon', href: '/assets/images/_EX.png', type: "image/x-icon" }]
       ],
+    configureWebpack: {
+      resolve: {
+        alias: {
+          '@asset_directory': '../.vuepress/public/assets/images'
+        }
+      }
+    },
     // theme and its config
     theme: '@vuepress/theme-default',
     themeConfig: {
@@ -71,5 +78,4 @@ module.exports = {
             },
           ],
       ],
-    
   }

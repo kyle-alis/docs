@@ -8,7 +8,7 @@ next: /other-resources/other-resources.html
 **alis.exchange** has a collection of resources that follow the best practices of resource-oriented design. 
 These resources are used to elegantly integrate cloud technologies that make up the **alis.exhange** platform. The three most important resources are depicted in the image below.
 
-![](../.vuepress/public/assets/images/resourceHierarchy.svg)
+![](~@asset_directory/resourceHierarchy.svg)
 
 The three major resources can be communicated together as an `organisation` having one or more `product`,
 consisting of one or more `neuron`. Additionally, `products` have `deployments`, which consists of all, or a subset, of the

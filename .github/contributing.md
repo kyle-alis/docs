@@ -60,8 +60,38 @@ Once we have reviewed your PR we will merge it into the original repo and your'r
 
 ## Working on the content
 
-- titles
-- next page link
-- images paths
-- alis.exhcange is always in bold
-- links with <a></a> must have target="_blank"
+The set of guidelines provided are to ensure consistency in maintaining and improving the documentation. Following these guidelines would speed up the review process and ultimately the addition of your contribution which would provide higher quality documentation. 
+
+### alis.exchange
+
+All mentions to **alis.exchange** should be in bold type face. This could be achieved by placing double ** before and after **alis.exchange**.
+### Page Headers
+
+Each page should have a `YAML front matter` stating the title of the page. This will also be the title displayed in the side navigation bar.
+
+Prev and next links are defined in the `YAML front matter`. Provide the relative page link in the format '/{topic}/{document-name}'.
+
+```
+---
+title: Page Title
+next: {topic}/{document_name}
+prev: {topic}/{document_name}
+---
+```
+## Asset Handling
+
+Asset are saved in the `docs/.vuepress/public/assets/images/` directory. Referencing a image in a document should use relative URLs:
+
+```
+![](~@asset_directory/image_name.png)
+```
+
+The an alias for the asset directory is set as `@asset_directory` and can be referenced by `~` followed by the asset's name.
+
+## External Links
+
+All links to internal and external resources should be referenced with the Vuepress styled links:
+
+```
+[display_name](link)
+```

@@ -1,5 +1,5 @@
 ---
-title: "Set up your favourite IDE"
+title: Set up your favourite IDE
 next: /guides/make-your-first-request
 ---
 

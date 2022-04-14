@@ -1,5 +1,5 @@
 ---
-title: "Quick Start"
+title: Quick Start
 next: /guides/set-up-your-favourite-IDE
 ---
 # Quick Start
