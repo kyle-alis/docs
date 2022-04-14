@@ -1,6 +1,6 @@
 ---
 title: "Quick Start"
-next: /guides/make-your-first-request
+next: /guides/set-up-your-favourite-IDE
 ---
 # Quick Start
 
@@ -90,13 +90,13 @@ Experience the simplicity in accessing these methods in any of the supported lan
 2. Make sure you are in the `playground` directory.
 
 ```bash
-$ cd workspace/playground
+cd workspace/playground
 ```
 
 3. Run the code by running the terminal command:
 
 ```bash
-$ go run *.go
+go run *.go
 ```
 
 #### Get a feel for the **alis.exchange** experience
@@ -122,13 +122,13 @@ We suggest creating your own function and incorporating a request to the `BooksC
 2. Make sure you are in the `playground` directory.
 
 ```bash
-$ cd workspace/playground
+cd workspace/playground
 ```
 
 3. Run the code
 
 ```bash
-$ Rscript booksConsume.r
+Rscript booksConsume.r
 ```
 
 #### Get a feel for the **alis.exchange** experience

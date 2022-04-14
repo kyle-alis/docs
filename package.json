@@ -2,11 +2,13 @@
     "name": "main",
     "version": "1.0.0",
     "dependencies": {
-      "vuepress": "^1.9.7"
+        "vuepress": "^1.9.7"
     },
     "scripts": {
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "vuepress-plugin-container": "^2.1.5"
     }
-      
-  }
+}

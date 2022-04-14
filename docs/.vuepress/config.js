@@ -53,4 +53,23 @@ module.exports = {
       nextLinks: false,
       prevLinks: false,
     },
+    plugins: [
+        [
+          'vuepress-plugin-container',
+          {
+            type: 'VSCodePluginImage',
+            before: `<div class="VSCodePluginImage">`,
+            after: '</div>',
+          },
+        ],
+        [
+            'vuepress-plugin-container',
+            {
+              type: 'GoLandPluginImage',
+              before: `<div class="GoLandPluginImage">`,
+              after: '</div>',
+            },
+          ],
+      ],
+    
   }

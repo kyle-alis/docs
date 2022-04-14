@@ -1,4 +1,5 @@
 ---
+title: Core Concepts
 next: /other-resources/other-resources.html
 ---
 

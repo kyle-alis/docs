@@ -1,5 +1,8 @@
 ---
+title: Command Line Interface
 sidebarDepth: 2
+prev: /guides/set-up-your-favourite-IDE
+next: /guides/make-your-first-request
 ---
 
 # Command Line Interface

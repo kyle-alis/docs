@@ -62,3 +62,6 @@ Once we have reviewed your PR we will merge it into the original repo and your'r
 
 - titles
 - next page link
+- images paths
+- alis.exhcange is always in bold
+- links with <a></a> must have target="_blank"

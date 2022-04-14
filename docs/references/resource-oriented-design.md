@@ -1,4 +1,5 @@
 ---
+title: Resource Oriented Design
 next: /references/core-concepts.html
 ---
 
