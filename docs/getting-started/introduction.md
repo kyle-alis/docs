@@ -24,7 +24,7 @@ The alis.exchange platform is built and maintained by it's community and for it'
 ## Method
 The **alis.exchange** platform comprises of patterns that enable the defining, managing and deploying of resource orientated services and interfaces in a consistent and scalable way.
 
-Curious as to how? See the [Reference](/references/resource-oriented-design.html) documents to find out more.
+Curious as to how? See the [Reference](/references/resource-oriented-design) documents to find out more.
 
 ## Get Started
-Excited to start exploring. Begin by following the [Quick Start](./quick-start.md)?
+Excited to start exploring. Begin by following the [Quick Start](./quick-start)?

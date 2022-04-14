@@ -95,3 +95,9 @@ All links to internal and external resources should be referenced with the Vuepr
 ```
 [display_name](link)
 ```
+
+Relative URLs are to be used for referencing internal documents:
+
+```
+[Quick Start](../docs/getting-started//quick-start)
+```
