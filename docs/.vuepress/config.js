@@ -11,8 +11,8 @@ const sidebar = [
     title: 'Guides',
     collapsable: false, 
     children: [
+        "/guides/command-line-interface",
         '/guides/make-your-first-request',
-        "/getting-started/command-line-interface"
     ]
     },
     {
@@ -37,7 +37,7 @@ module.exports = {
     title: 'alis.exchange',
     description: 'This is my first VuePress site',
     head: [
-        ['link', { rel: 'icon', href: 'https://github.com/kyle-alis/demo2/blob/gh-pages/assets/images/_EX.png?raw=true' }]
+        ['link', { rel: 'icon', href: '../.vuepress/public/assets/images/_EX.png' }]
       ],
     // theme and its config
     theme: '@vuepress/theme-default',
@@ -46,7 +46,7 @@ module.exports = {
       docsDir: 'docs',
       docsBranch: 'main',
       editLinks: true,
-      logo: 'https://github.com/kyle-alis/demo2/blob/gh-pages/assets/images/alis_exchange.png?raw=true',
+      logo: "https://github.com/alis-x/docs/blob/main/docs/.vuepress/public/assets/images/alis_exchange.png?raw=true",
       displayAllHeaderLinks: true,
       sidebar: sidebar,
       nextLinks: false,

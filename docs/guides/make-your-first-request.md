@@ -1,10 +1,10 @@
 # Make a request to a product
 
-> 👉 This section is supplementary to the [quickstart](/docs/getting-started/quick-start.md). We recommend that you first complete the quickstart before 
+> This section is supplementary to the [quickstart](/getting-started/quick-start.md). We recommend that you first complete the quickstart before 
 
 Given the underlying technologies used, **alis.exchange** provides the ability to generate client libraries for various
 supported coding languages. For users of the product, it allows you to programmatically access products natively in your
-code without having to wrangle obscure, unpredictable data objects (see [quickstart](/docs/getting-started/quick-start.md)).
+code without having to wrangle obscure, unpredictable data objects (see [quickstart](/getting-started/quick-start.md)).
 
 Irrespective of the language, this is done in two steps:
 
@@ -13,7 +13,7 @@ Irrespective of the language, this is done in two steps:
 
 Following the same Book example as the quickstart, this guide will step you through making requests in your own developer environment.
 
-> 👨‍💻 We currently only provide the guide for Go. Want to help us expand this to other languages? [Make a contribution](https://github.com/alis-x/docs/edit/main/docs/guides/make-your-first-request.md).
+> We currently only provide the guide for Go. Want to help us expand this to other languages? [Make a contribution](https://github.com/alis-x/docs/edit/main/docs/guides/make-your-first-request.md).
 
 
 ## Book repository example
@@ -41,7 +41,7 @@ import "google/type/date.proto";
 
 option go_package = "go.protobuf.foo.alis.exchange/foo/br/resources/books/v1";
 // Book service for foo.br.
-service BookService {
+service BooksService {
 	// List all available books.
 	rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
 		option (google.api.http) = {
@@ -198,21 +198,6 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 		opts = append(opts, grpc.WithTransportCredentials(cred))
 	}
 
-	// use a tokenSource to automatically inject tokens with each underlying client request
-	audience := "https://" + strings.Split(host, ":")[0]
-	tokenSource, err := idtoken.NewTokenSource(ctx, audience, option.WithAudiences(audience))
-	if err != nil {
-		return nil, status.Errorf(
-			codes.Unauthenticated,
-			"NewTokenSource: %s", err,
-		)
-	}
-	opts = append(opts, grpc.WithPerRPCCredentials(grpcTokenSource{
-		TokenSource: oauth.TokenSource{
-			tokenSource,
-		},
-	}))
-
 	return grpc.Dial(host, opts...)
 }
 ```
@@ -239,20 +224,24 @@ import "fmt"
 var(...)
 
 func main() {
-	_ = printBookNames()
+	// Call the printBookNames function
+	result, err := printBookNames()
+	fmt.Println(result, err)
 }
 
-func printBookNames() error {
+// function makes a call to the books service to get a list of books
+func printBookNames() (string, error) {
+	// Call the ListBooks method on the client library
 	allBooks, err := booksClient.ListBooks(context.Background(), &pb.ListBooksRequest{})
 	if err != nil {
-		return fmt.Errorf("could not list books: %v", err)
+		return "", fmt.Errorf("could not list books: %v", err)
 	}
-
+	// Print the list of books from the response
 	for _, book := range allBooks.Books {
 		fmt.Printf("%s\n", book.DisplayName)
 	}
 
-	return nil
+	return "Done!", nil
 }
 ```
 
@@ -268,19 +257,26 @@ package main
 import "fmt"
 
 func main() {
-	_ = printBookDetails("books/c4a2")
+	// Call the printBookDetails function
+	result, err = printBookDetails("books/c4a2")
+	fmt.Println(result, err)
 }
 
-func printBookDetails(bookName string) error {
+// function makes a call to the books service to get a book details
+func printBookDetails(bookName string) (string, error) {
+	//Create a request to get a book details
 	req := pb.GetBookRequest{Name: bookName}
 
+	// Call the GetBook method on the client library
 	book, err := booksClient.GetBook(context.Background(), &req)
 	if err != nil {
-		return fmt.Errorf("could not get book: %v", err)
+		return "", fmt.Errorf("could not get book: %v", err)
 	}
+
+	// Print the book details
 	fmt.Printf("%s\n", book)
 
-	return nil
+	return "Done!", nil
 }
 ```
 
@@ -340,33 +336,45 @@ func init() {
 }
 
 func main() {
-	_ = printBookNames()
-	_ = printBookDetails("books/c4a2")
+	// Call the printBookNames function
+	result, err := printBookNames()
+	fmt.Println(result, err)
+
+	// Call the printBookDetails function
+	result, err = printBookDetails("books/c4a2")
+	fmt.Println(result, err)
 }
 
-func printBookNames() error {
+// function makes a call to the books service to get a list of books
+func printBookNames() (string, error) {
+	// Call the ListBooks method on the client library
 	allBooks, err := booksClient.ListBooks(context.Background(), &pb.ListBooksRequest{})
 	if err != nil {
-		return fmt.Errorf("could not list books: %v", err)
+		return "", fmt.Errorf("could not list books: %v", err)
 	}
-
+	// Print the list of books from the response
 	for _, book := range allBooks.Books {
 		fmt.Printf("%s\n", book.DisplayName)
 	}
 
-	return nil
+	return "Done!", nil
 }
 
-func printBookDetails(bookName string) error {
+// function makes a call to the books service to get a book details
+func printBookDetails(bookName string) (string, error) {
+	//Create a request to get a book details
 	req := pb.GetBookRequest{Name: bookName}
 
+	// Call the GetBook method on the client library
 	book, err := booksClient.GetBook(context.Background(), &req)
 	if err != nil {
-		return fmt.Errorf("could not get book: %v", err)
+		return "", fmt.Errorf("could not get book: %v", err)
 	}
+
+	// Print the book details
 	fmt.Printf("%s\n", book)
 
-	return nil
+	return "Done!", nil
 }
 
 type grpcTokenSource struct {
@@ -396,34 +404,29 @@ func NewConn(ctx context.Context, host string, insecure bool) (*grpc.ClientConn,
 		opts = append(opts, grpc.WithTransportCredentials(cred))
 	}
 
-	// use a tokenSource to automatically inject tokens with each underlying client request
-	audience := "https://" + strings.Split(host, ":")[0]
-	tokenSource, err := idtoken.NewTokenSource(ctx, audience, option.WithAudiences(audience))
-	if err != nil {
-		return nil, status.Errorf(
-			codes.Unauthenticated,
-			"NewTokenSource: %s", err,
-		)
-	}
-	opts = append(opts, grpc.WithPerRPCCredentials(grpcTokenSource{
-		TokenSource: oauth.TokenSource{
-			tokenSource,
-		},
-	}))
-
 	return grpc.Dial(host, opts...)
 }
 ```
 :::
 
+## Get a feel for the **alis.exchange** experience
 
-### Using the responses
+Try your hands creating your own function and incorporating a request to the `BooksClient`. Some suggestions of things to try:
 
-As seen in the example, response type is ALWAYS predictable as it is based on the proto definition of the resource. This
-predictability allows you to easily use the response to perform actions or augment the data.
+* Loop through all the books and print out the author.
+* Get a book and wrangle the response to be printed out in a sentence structure.
+* Use the response of `ListBooks` to make multiple `GetBook` requests.
+
+::: tip ProTip
+
+Running a new function in debug mode allows you to see what happens at every line of code when a function is executed. To run a function in debug mode in VS Code place a break point next to the line number of the function line you would like to explore during run time. Select the run & debug option in the left hand navigation bar. Click `Run and Debug`. All variables and there state at the break point is revealed in the left panel. The function is paused at the breakpoint, to continue with the function's execution click the red stop square in the top popup menu. Hover over the top popup menu's options to see what else you can do when a function is paused at a breakpoint.
+
+![gif of debug](../.vuepress/public/assets/images/debug_gif.gif)
+:::
+
 
 ## Next Steps
 
 **Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
 
-Already a signed up? [Get your local environment set up](/docs/getting-started/command-line-interface.md)
+Already signed up? [Get your local environment set up](/getting-started/command-line-interface.md)

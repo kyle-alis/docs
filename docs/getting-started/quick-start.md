@@ -16,7 +16,7 @@ From a technical perspective:
 > Protocol buffers are a language-neutral, platform-neutral extensible mechanism for serializing structured data. [Source](https://developers.google.com/protocol-buffers)
 
 What is important from a practical perspective however is that:
-> You **define how you want your data to be structured once**, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.
+> You **define how you want your data to be structured once**, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages. [Source](https://developers.google.com/protocol-buffers)
 
 Two things to take note of:
 
@@ -51,11 +51,11 @@ message Book {
 }
 ```
 
-The builders of this product allows you to list all the books available, `ListBooks`, and to retrieve the details of a specific book, `GetBook`. These are also defined in the `books.proto` file as part of the `BookService`:
+The builders of this product allows you to list all the books available, `ListBooks`, and to retrieve the details of a specific book, `GetBook`. These are also defined in the `books.proto` file as part of the `BooksService`:
 
 ```protobuf
 // Book service for foo.br.
-service Service {
+service BooksService {
 	// List all available books.
 	rpc ListBooks(ListBooksRequest) returns (ListBooksResponse) {
 		option (google.api.http) = {
@@ -76,20 +76,24 @@ Now that we know what resource is available, `Book`, and what we are able to do 
 
 ### Run the example
 
-Experience the simplicity in accessing these methods in any of the supported languages using the <a href="https://gitpod.io/start/#alisx-codespacesplayg-5aghydnu51y" target="blank">preconfigured Cloud IDE</a>.
+Experience the simplicity in accessing these methods in any of the supported languages in using one of our preconfigured cloud IDEs:
 
 ::: details Go
 #### Make a request using Go
 
-1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `go` directory.
+<a href="https://gitpod.io#snapshot/c1eafefa-0414-439e-a618-4089e1d50143" target="_blank">Preconfigured Go cloud IDE</a>
 
-If executing this example on Gitpod, run the following command from the terminal:
+1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
+
+	>If the terminal is already open run `$ clear` to clear the terminal window.
+
+2. Make sure you are in the `playground` directory.
 
 ```bash
-$ cd $GITPOD_REPO_ROOT/go
+$ cd workspace/playground
 ```
 
-2. Run the code by running the terminal command:
+3. Run the code by running the terminal command:
 
 ```bash
 $ go run *.go
@@ -109,15 +113,23 @@ We suggest creating your own function and incorporating a request to the `BooksC
 ::: details R
 #### Make a request using R
 
-1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ) and ensure that you are in the `go` directory by running:
+<a href="https://gitpod.io#snapshot/c858a081-f9e0-4791-9330-606a568df6fd" target="_blank">Preconfigured R cloud IDE</a>
+
+1. Open up the terminal (Mac: `⌘ + j`, Windows: `ctrl + j` ).
+
+	>If the terminal is already open run `$ clear` to clear the terminal window.
+
+2. Make sure you are in the `playground` directory.
 
 ```bash
-$ cd $GITPOD_REPO_ROOT/R
+$ cd workspace/playground
 ```
 
-2. Run the code
+3. Run the code
 
-<!-- TODO: Kyle to add commands -->
+```bash
+$ Rscript booksConsume.r
+```
 
 #### Get a feel for the **alis.exchange** experience
 
@@ -130,11 +142,8 @@ We suggest creating your own function and incorporating a request to the `BooksC
 * Use the response of `ListBooks` to make multiple `GetBook` requests.
 :::
 
-If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/docs/guides/make-your-first-request.md).
-
+If you are interested in recreating this example in your own development environment, we suggest that you check out the [Make your first request guide](/guides/make-your-first-request.md).
 ## Next Steps
 
-**Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="blank">Get in touch</a>.
-
-Already a signed up? [Get your local environment set up](/docs/getting-started/command-line-interface.md)
+**Ready to join alis.exchange?** <a href="https://alis.exchange/signup" target="_blank">Get in touch</a>.
 

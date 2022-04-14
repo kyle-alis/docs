@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://github.com/kyle-alis/demo2/blob/main/docs/.vuepress/public/assets/images/alis_exchange.png?raw=true
+heroImage: https://github.com/alis-x/docs/blob/main/docs/.vuepress/public/assets/images/alis_exchange.png?raw=true
 # heroText: alis.exchange
 tagline: Build better, iterate quicker, scale simpler.
 actionText: Get Started →
