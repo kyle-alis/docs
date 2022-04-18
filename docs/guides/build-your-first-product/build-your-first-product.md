@@ -234,5 +234,56 @@ The following steps will run through some important aspects of the proto.
     }
     ```
 
+#### 🏃‍♂ Ex 4: Define the Cloud Infrastructure requirements
 
+Terraform is used to specify the infrastructure required for your neuron. **alis.exchange** provides various `*.tf` file templates that are preconfigured for the majority of use cases. This includes the specifications of:
 
+- Cloud Run: Which is used to run the container of your neuron. The configuration includes the scaling specifications, naming of the instance, traffic and which container to run. 
+- Identity and Access Managament (IAM): Which is used to restrict access to the neuron
+- Variables: Various environmental variables that are used to facilitate multiple deployment environments and dependencies on other products.
+
+> 💡 **Tip:** Scan through the `*.tf` files along with the [Terraform Documentation](https://www.terraform.io/intro) and the [Google documentation on Terraform Registry](https://registry.terraform.io/providers/hashicorp/google/latest/docs) to understand what is being configured.
+
+When building your own neurons, you may bulk up your neurons with additional functionality by simply adding the Terraform specification for what you are trying to achieve. Examples may be adding:
+
+- A [Cloud Spanner Instance](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/spanner_instance);
+- [Defining a Workflow](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/workflows_workflow); and
+- [Creating](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/pubsub_topic) or [subscribing](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/pubsub_subscription) to a PubSub topic.
+
+#### 🏃‍♂ Ex 5: Compile the proto files locally
+
+ > 🤓 In order to implement the gRPC server, or programmatically use the API, the `.proto` files are compiled into files containing the service and message definitions for a specified language. In this example, we will be focussing on the implementation in Go.
+
+ In your terminal, run the following command, specifying your neuron name:
+ ```bash
+ $ alis neuron genprotobuf foo.ad.resources-{uniqueNeuronName}-v1
+ ```
+
+ This commands generates `.pb.go` files locally in the `$HOME/alis.exchange/foo/protobuf/go/*` directory, following the path of the Neuron. The contents of these files are not necessary to understand, other than knowing that they contain the definitions for the Go language.
+
+ > 🤓 Once we have finished implementing our API we will push these files to make them available for others to use.
+
+ #### 🏃‍♂ Ex 6: Implement the gRPC server
+
+When you ran `alis neuron create ...` command, various template files were also added to the `ad` product directory. These will make sense as we implement the server.
+
+1. To find the definitions for your service, import it in the go.mod using `replace` (since not yet public)
+2. Go mod tidy
+3. In `server.go` copy over the `init` section
+
+> 🤓 In the server, we establish client connections with Google and other **alis.exchange** products to make them accessible during run time. In the `main()` section, we create and serve a gRPC server which implements the methods were defined in the proto and was translated into the `.pb.go` files.
+
+4. Copy over the tests in `methods_test.go`. Writing the tests first allow us to think about what our expected API behaviour should be before implementing
+
+5. Implement the methods in `methods.go`. Copy over the code...
+
+> 🤓 The code itself provides the detailed logic about what happens but the typical body of a method will include
+> 1. Some validation of the arguments
+> 2. Some interaction with APIs
+> 3. Parsing if required
+> 4. Performing actions with APIs
+> 5. Response
+
+6. Run the tests
+
+If all of the tests have passed, we are ready build and deploy our neuron.
