@@ -2,9 +2,9 @@
   <div class="welcome-container">
     <h1>alis<span class="page-title-dot">.</span>exchange</h1>
     <h5>Build Better, iterate quicker, scale simpler.</h5>
-    <a href="http://localhost:8080/getting-started/introduction.html"
-      >Get Started →</a
-    >
+    <a href="http://docs.alis.exchange/getting-started/introduction.html">
+      Get Started →
+    </a>
   </div>
 </template>
 
