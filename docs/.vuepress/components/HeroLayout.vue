@@ -35,6 +35,18 @@ h5 {
   font-weight: 100;
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 48px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  a {
+    font-size: 14px;
+  }
+}
+
 .page-title-dot {
   color: #cf0000;
 }
