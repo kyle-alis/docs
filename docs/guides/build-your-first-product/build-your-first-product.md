@@ -81,7 +81,7 @@ While the CLI was displaying a spinner:
 - A Google Cloud project that hosts the product was created within the foo organisation.
 - An empty Google Cloud Source Repository was created for the `ad` product.
 - Various permissions was added for the specified owner of the product in order to control access for clients and developers.
-- Various Terraform template files was added within ```$HOME/alis.exchange/foo/proto/foo/ad``` that are used to manage the cloud infrastructure of your product. These Terraform files collectively specifies all the cloud infrastructure that needs to be configured for your product to work, such as enabling various APIs (Cloud Run, Firestore, etc.) and creating permission groups.
+- Various Terraform template files was added within `$HOME/alis.exchange/foo/proto/foo/ad` that are used to manage the cloud infrastructure of your product. These Terraform files collectively specifies all the cloud infrastructure that needs to be configured for your product to work, such as enabling various APIs (Cloud Run, Firestore, etc.) and creating permission groups.
 :::
 
 
@@ -93,7 +93,7 @@ information such as who client is, which books were borrowed, the date the books
 Knowing that people often forget when books are due for return, they also require a `notification` service which sends
 a reminder to clients about the books required for return, at the specified date.
 
-As part of this example, we will be creating a new product with a `receipt` resource neuron and a `notification` service
+As part of this example, we will be a `receipt` resource neuron within a new product along with and a `notification` service.
 neuron.
 
 :::details 🤓 What is a neuron?
@@ -263,15 +263,166 @@ When building your own neurons, you may bulk up your neurons with additional fun
 
  > 🤓 Once we have finished implementing our API we will push these files to make them available for others to use.
 
- #### 🏃‍♂ Ex 6: Implement the gRPC server
-
+<!-- TODO: This will be updated if we can get the CLI alis neuron gen commands flying -->
+ #### 🏃‍♂ Ex 6: Update dependencies required to implement the services
 When you ran `alis neuron create ...` command, various template files were also added to the `ad` product directory. These will make sense as we implement the server.
 
-1. To find the definitions for your service, import it in the go.mod using `replace` (since not yet public)
-2. Go mod tidy
-3. In `server.go` copy over the `init` section
+1. To find the definitions for your service, it is required to import the definitions which are specified with the `go.mod` file. These imports, similar to other go packages, are pulled from an online environment. Since we are still building out the services, and have not yet pushed these definitions to an online environment (this will be done in step _______), we will use a `replace` statement to point to the locally compiled files from the previous step.
 
-> 🤓 In the server, we establish client connections with Google and other **alis.exchange** products to make them accessible during run time. In the `main()` section, we create and serve a gRPC server which implements the methods were defined in the proto and was translated into the `.pb.go` files.
+In your `go.mod`, uncomment the line similar to the one below:
+```
+replace go.protobuf.ad.foo.alis.exchange with ../../../protobuf/foo/ad
+```
+2. Ensure that your terminal is open in the `v1` directory containing the `go.mod` file and run the command `go mod tidy` to sync the dependencies.
+
+#### 🏃‍♂ Ex 7: Implement the services
+
+> 🤓 In the `server.go` file, we establish client connections with Google and other **alis.exchange** products during initialisation (`init()`) to make them accessible during run time. In the `main()` section, we create and serve a gRPC server which implements the methods (done in `methods.go`) which were defined in the proto and was translated into the `.pb.go` files.
+
+1. **Establishing client connection during `init()`** 
+
+The init section contains various boilerplate code, of which we can remove that which is not necessary, and add further connections. We want to create a connection with Firestore, which will store the details of our `receipts`, as well as to the `foo.br` product in order to get various book defintions.
+
+Ensure that the section above your `main.go` looks exactly like code below:
+
+```go
+package main
+
+import (
+	"cloud.google.com/go/firestore"
+	"context"
+	"google.golang.org/grpc"
+	"log"
+	"net"
+	"os"
+
+	pb "go.protobuf.foo.alis.exchange/foo/br/resources/books/v1"
+)
+
+// client is a global client, initialized once per cloud run instance.
+var (
+	bigtableClient    *bigtable.Client
+	booksClient       pbBooks.BooksServiceClient
+	eventsClient      pbEvents.ServiceClient
+)
+
+func init() {
+
+	// Pre-declare err to avoid shadowing.
+	var err error
+
+	// Disable log prefixes such as the default timestamp.
+	// Prefix text prevents the message from being parsed as JSON.
+	// A timestamp is added when shipping logs to Cloud Logging.
+	log.SetFlags(0)
+
+	// Retrieve project id from the environment.
+	projectID := os.Getenv("ALIS_OS_PROJECT")
+	if projectID == "" {
+		log.Fatal("ALIS_OS_PROJECT env not set.")
+	}
+
+	// Initialise Firestore client
+	firestoreClient, err = firestore.NewClient(context.Background(), projectID)
+	if err != nil {
+		log.Fatalf("firestore.NewClient: %v", err)
+	}
+
+    // Retrieve BR cloud run hash from the environment.
+	brHash := os.Getenv("ALIS_OS_BR_CLOUDRUNHASH")
+	if brHash == "" {
+		log.Fatal("ALIS_OS_PROJECT env not set.")
+	}
+
+    // Create a connection with the gRPC server hosted on Cloud Run
+    // The URI of these services follows a consistent pattern:
+    // {NeuronName}-{GoogleProjectCloudRunHash}-{region}.a.run.app:443
+    // 
+    // The {GoogleProjectCloudRunHash} is not preemptable but is the same for all neurons
+    // of a specific product deployment, ie. the same for all Cloud Run services in a Google Project.
+    // This therefore requires you to obtain the hash from the product that you are making use of.
+    //
+    // The {region} is the region in which the service is hosted. The default region
+    // on alis.exchange is `ew`, ie. Europe-West. For more information on regions,
+    // see: __________.
+    if conn, err := NewConn(context.Background(), "resources-books-v1-" + brHash + "-ew.a.run.app:443", false); err != nil {
+        log.Fatalf("booksClient new connection: %v", err)
+	} else {
+        // If the connection was succesfully established, instantiate a new
+        // client for the BooksService. This client will be used to make the
+        // appropriate calls to the BooksService methods.
+		booksClient = pb.NewBooksServiceClient(conn)
+	}
+}
+```
+
+> 🚩 If your IDE is giving any import errors, rerun `go mod tidy`.
+
+2. **Configure your environmental variables**
+
+In the above code, there are two usages of `os.Getenv(...)`. This is used to obtain environmental variables, which simplifies having multiple deployment environments by allowing us to declare these variables on deployment. 
+
+<!-- TODO: add more detail/write an article about ENVs, their usage and utility -->
+
+For the production environment, we will specify these when deploying. For the local environment, we make use of the `local.env` file in the product (`ad`) directory. To ensure that your IDE is able to find the values in the `local.env`, ensure that you have [installed and configured the correct plugins]().
+
+The `local.env` should contain the following content:
+
+```yaml
+# this file is used for local development purposes only
+# and should be used in conjunction with your IDE.
+
+# Specifies the type of environment: 'development' or 'production'
+#
+# In the production environment this is automatically added to 
+# The Cloud Run service through the specification in the `cloudrun.tf`
+ALIS_OS_ENV=development
+
+# The Google Project ID where the neuron will be hosted. This
+# is a product deployment and therefore requires a product deployment
+# to exist before it can be declared.
+#
+# This can be found be running `alis product tree foo.ad` and selecting
+# a deployment ID. We typically use a dev environment for local development
+# and testing.
+ALIS_OS_PROJECT=foo-ad-dev-....
+
+# The Cloud Run hash of the br product deployment
+# that we have access to.
+#
+# For your own products, you can find this hash by opening
+# a Cloud Run instance and checking the URL.
+ALIS_OS_BR_CLOUDRUNHASH=radxpo5gpa
+```
+<!-- TODO: NB make sure we can't generate service account keys in the Foo org using the CLI -->
+
+3. **Implement the gRPC server** 
+
+The `main()` section in your `server.go` contains all of the boilerplate code you require to simply run the server. Check that your `main()` contains the exact following: 
+
+```go
+func main() {
+	log.Println(&Entry{Message: "starting server...", Severity: LogSeverity_NOTICE})
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		log.Println(&Entry{Message: "Defaulting to port " + port, Severity: LogSeverity_WARNING})
+	}
+
+	listener, err := net.Listen("tcp", ":"+port)
+	if err != nil {
+		log.Fatalf("net.Listen: %v", err)
+	}
+
+	grpcServer := grpc.NewServer(grpc.UnaryInterceptor(serverInterceptor))
+	pb.RegisterServiceServer(grpcServer, &myService{})
+
+	if err = grpcServer.Serve(listener); err != nil {
+		log.Fatal(err)
+	}
+}
+```
 
 4. Copy over the tests in `methods_test.go`. Writing the tests first allow us to think about what our expected API behaviour should be before implementing
 
