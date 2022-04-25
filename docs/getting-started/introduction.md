@@ -19,12 +19,13 @@ API-first cultures enable teams and systems to decouple dependencies and thereby
 Many of the "barriers to entry" of software, such as cloud system architecture, identity management, documentation management etc, are non-differentiating. We believe that by removing these barriers we can increase the time and effort dedicated to real innovation and problem solving.
 
 ### We believe in the power of community
-The alis.exchange platform is built and maintained by it's community and for it's community. We believe that together we can build something great!
+The **alis.exchange** platform is built and maintained by it's community and for it's community. We believe that together we can build something great!
 
+<!-- This section definitely needs a lot more work -->
 ## Method
 The **alis.exchange** platform comprises of patterns that enable the defining, managing and deploying of resource orientated services and interfaces in a consistent and scalable way.
 
 Curious as to how? See the [Reference](/references/resource-oriented-design) documents to find out more.
 
 ## Get Started
-Excited to start exploring. Begin by following the [Quick Start](./quick-start)?
+Excited to start exploring. Begin by following the [Quick Start](./quick-start)
