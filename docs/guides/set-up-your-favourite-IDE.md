@@ -32,7 +32,7 @@ A few things to consider when choosing your IDE. VS Code and GoLand provides sup
 
 ### Plugin Configuration
 
-The aip linter plugin requires that there is either a `.api-linter.json` or `.api-linter.yaml` file in the project root. This file states the the rules to be enabled or disables and the included path. Read the installation notes on the <a href="https://marketplace.visualstudio.com/items?itemName=aoca.aip-linter" target="_blank">extension page</a>.
+The aip linter plugin requires that there is either a `.api-linter.json` or `.api-linter.yaml` file in the project root. This file states which rules should be enabled or disabled. Read the installation notes on the <a href="https://marketplace.visualstudio.com/items?itemName=aoca.aip-linter" target="_blank">extension page</a>.
 
 ## Jetbrains GoLand
 
