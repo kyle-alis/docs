@@ -60,8 +60,8 @@ Your Git needs to be configured with Google Cloud Source repositories. Credentia
     
     > Not sure what your OS or ARCH is, run `uname -a` to find out.
     
-    ###List of available CLI binaries 
-    MacOS:
+    ###List of available CLI binaries
+   MacOS:
     - [Darwin Amd64](https://files.cli.alis.services/darwin/amd64/latest/alis)
     - [Darwin Arm64](https://files.cli.alis.services/darwin/arm64/latest/alis)
     
