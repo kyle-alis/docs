@@ -98,9 +98,9 @@ alis -h
 # list available organisations
 alis org list
 
-# Setup your local environment for your organisation
-alis org get ${your_org_name}
+# Setup your local environment for organisation 'play'
+alis org get play
 
 # list available products
-alis product list foo
+alis product list play
 ```
