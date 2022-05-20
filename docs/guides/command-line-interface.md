@@ -28,27 +28,6 @@ The CLI makes use of Google Cloud SDK authentication to seamlessly authenticate 
     *NOTE* Ensure that you login using your account associated with alis.exchange.
 3. Run `gcloud auth application-default login` to acquire new user credentials to use for Application Default Credentials ([ADC](https://developers.google.com/identity/protocols/application-default-credentials)). These are used in calling Google APIs.
 
-
-### Go
-
-Install any one of the **three latest major** [releases of Go](https://golang.org/doc/devel/release.html).  For installation instructions, see Go’s [Getting Started](https://golang.org/doc/install) guide.
-
-☑️ After installation, running `go version` should reflect one of the three latest major Go versions.
-
-### Protocol Buffer compiler
-
-1. Install the **[Protocol buffer](https://developers.google.com/protocol-buffers) compiler**, `protoc`, [version 3](https://developers.google.com/protocol-buffers/docs/proto3). For installation instructions, see [Protocol Buffer Compiler Installation](https://grpc.io/docs/protoc-installation/).  This tool significantly simplifies working with our Protocol Buffers.
-
-2. Install the required **Go plugins** for the protocol compiler:
-
-    1. Install the protocol compiler plugins for Go using the following commands:
-
-            go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-            go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
-
-    2. Update your `PATH` so that the `protoc` compiler can find the plugins:
-
-           export PATH="$PATH:$(go env GOPATH)/bin"
            
 ### Git
 
@@ -65,20 +44,51 @@ Your Git needs to be configured with Google Cloud Source repositories. Credentia
 
 ## Install the CLI
 
-1. Install the CLI. This will place the CLI binary in your `$GOPATH/bin` folder.
+1. Run the following command to create a folder in your home directory **alis.exchange** with a sub-folder cli.
 
-```
-go install github.com/alis-x/cli/alis@latest
-```
-2. Ensure that `$GOPATH/bin` has been added to your `$PATH` such that your terminal can access the `alis` CLI. The following command appends the path to the `.zshrc` file.
-
-```
-echo 'export PATH="$PATH:$(go env GOPATH)/bin"' >> ~/.zshrc
+```bash
+    mkdir -p ~/alis.exchange/cli
 ```
 
-3. Close and restart all currently open terminal windows, including IDEs, such that the configurations of the paths can take place.
+2. Add this folder to your `$PATH`:
 
-### Try it out
+```bash
+  export PATH=$PATH:~/alis.exchange/cli
+```
+
+3. Download the latest version of the CLI for your operating system (OS) and architecture (ARCH). 
+    
+    > Not sure what your OS or ARCH is, run `uname -a` to find out.
+    
+    ###List of available CLI binaries 
+    MacOS:
+    - [Darwin Amd64](https://files.cli.alis.services/darwin/amd64/latest/alis)
+    - [Darwin Arm64](https://files.cli.alis.services/darwin/arm64/latest/alis)
+    
+   Windows:
+    - [Windows Amd64](https://files.cli.alis.services/windows/amd64/latest/alis)
+    - [Windows Arm](https://files.cli.alis.services/windows/arm/latest/alis)
+    - [Windows Arm64](https://files.cli.alis.services/windows/arm64/latest/alis)
+
+    Linux:
+    - [Linux Amd64](https://files.cli.alis.services/linux/arm64/latest/alis)
+    - [Linux Arm](https://files.cli.alis.services/linux/arm64/latest/alis)
+    - [Linux Arm64](https://files.cli.alis.services/linux/arm64/latest/alis)
+   
+
+4. Place the file in your alis.exchange/cli folder. Run the following command to give it execute permission:
+
+```bash
+    chmod a+x $HOME/alis.exchange/cli/alis
+```
+
+5. Close and restart all currently open terminal windows, including IDEs, such that the configurations of the paths can take place.
+
+   > For MacOs, open the CLI by right clicking on the file and open. This will prompt you 'The application is from an unidentified developer. Are you sure you want to open it?'. Select open. This will allow MacOs permission to always run the CLI and therefore you only have to do it with your initial installation.
+
+You have successfully installed the **alis.exchange** CLI!
+
+### Try out alis_ CLI
 
 ```bash
 # Show help 
@@ -87,8 +97,8 @@ alis -h
 # list available organisations
 alis org list
 
-# Setup your local environment for organisation 'foo'
-alis org get foo
+# Setup your local environment for your organisation
+alis org get ${your_org_name}
 
 # list available products
 alis product list foo
